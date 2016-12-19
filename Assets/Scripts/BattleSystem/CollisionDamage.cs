@@ -16,6 +16,7 @@ public class CollisionDamage : MonoBehaviour {
     private HealthManager current;
 
     void OnTriggerEnter(Collider col) {
+        //damage = col.gameObject.GetComponent<CollisionDamage>().damage;
         //Verifie si la collision est possible
        if (gameObject.layer == col.gameObject.layer)
             return;
@@ -58,6 +59,7 @@ public class CollisionDamage : MonoBehaviour {
                 else 
                     status = DamageType.DamageStatus.Critical;
             }
+          
             healthMan.TakeDamage( finalDamage , transform.position,status);
 
             previous = healthMan;

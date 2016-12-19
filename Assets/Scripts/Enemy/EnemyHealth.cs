@@ -40,6 +40,7 @@ public class EnemyHealth : HealthManager
 	{
         if (IsDead())
             return;
+        //Debug.Log(damage);
         currentHealth -= damage;
         if (damage > 1)
         {
